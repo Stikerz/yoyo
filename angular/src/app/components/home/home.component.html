@@ -1,0 +1,55 @@
+<div class="container">
+  <div id="register">
+    <h4>Get Weather</h4>
+    <form>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <label><b>City</b></label>
+          <input type="text" [(ngModel)]="city" class="form-control"
+                 placeholder="Enter City"
+                 name="city"
+          >
+        </div>
+
+
+        <div class="form-group">
+          <label>Days</label>
+          <input type="text" [(ngModel)]="days" class="form-control"
+                 id="days"
+                 placeholder="Enter Days"
+                 name="days"
+
+          >
+        </div>
+        <button (click)="get_weather()" type="submit" class="btn btn-primary">
+          Get Weather
+        </button>
+      </div>
+    </form>
+  </div>
+  <br>
+  <br>
+  <div id="table" class="overflow-auto">
+    <h4>City: {{city}}</h4>
+    <br>
+    <br>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Maximum(°C)</th>
+        <th scope="col">Minimum(°C)</th>
+        <th scope="col">Median(°C)</th>
+        <th scope="col">Mean(°C)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{maximum}}</td>
+        <td>{{minimum}}</td>
+        <td>{{median}}</td>
+        <td>{{average}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
