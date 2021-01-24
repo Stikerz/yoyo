@@ -29,13 +29,6 @@ NOTE: You will have to add your weather api key to `WEATHER_KEY`
 - Run ```python3 -m venv env``` to create virtual environment called env
 - Run ```source env/bin/activate``` to activate the virtual env
 - Run ```pip install -r requirements.txt``` to install project requirements
-- You can then run the migrations commands with `python manage.py
- makemigrations
-` then
- `python manage.py
- makemigrations
-` in the yoyo directory
-
 - You can then run the server command with `python manage.py runserver`
 
 - Start using api: `http://localhost:8000/api/locations/{city}/?days
