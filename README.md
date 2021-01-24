@@ -12,7 +12,7 @@ This project was written using python3.x. & Angular 9. A pip requirements.txt
  daemon is
  running
  
-- Build & Run the image: `docker-compose up -e WEATHER_KEY=*KEY* --build`
+- Build & Run the image: `docker-compose up --build`
 
 - Start using web app: `http://localhost:4200/`
 
