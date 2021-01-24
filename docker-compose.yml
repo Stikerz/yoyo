@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  angular-front-end:
+    container_name: angular_front-end
+    build: ./angular
+    volumes:
+      - ./angular:/angular_frontend
+    ports:
+      - "4200:4200"
+    command: bash -c "npm install && ng serve --host 0.0.0.0 --port 4200"
+  django-api:
+    build:
+      context: ./yoyo
+      dockerfile: Dockerfile
+    command: bash -c "export WEATHER_KEY=${WEATHER_KEY} && python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: weather_backend
+    volumes:
+      - ./yoyo:/ weather_backend
+    ports:
+      - "8000:8000"
