@@ -101,7 +101,7 @@ Total	                                     174	0	0	100%
 
 As an API user I want to get the minimum, maximum, average and median temperature for a given city and period of time.
 
-####Requirements
+#### Requirements
 - Create a Django application with RESTful API
 - Django application must run locally
 - API must be in the format /api/locations/{city}/?days={number_of_days}
