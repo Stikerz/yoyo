@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Get Location Weather Data Schema",
+  "type": ["object"],
+  "properties": {
+    "maximum": {
+      "type": "number"
+    },
+    "minimum": {
+      "type": "number"
+    },
+    "average": {
+      "type": "number"
+    },
+    "median": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "maximum",
+    "average",
+    "minimum",
+    "median"
+  ],
+  "additionalProperties": false
+}
